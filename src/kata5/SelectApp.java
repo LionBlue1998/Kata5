@@ -1,4 +1,4 @@
-package kata.pkg5;
+package kata5;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,7 +16,7 @@ public class SelectApp {
         Connection con = null;
         try {
             // parámetros de la BD
-            String URL = "jdbc:sqlite:C:\\Users\\LionBlue98\\Documents\\NetBeansProjects\\DB_SQLite\\Practica5.db";
+            String URL = "jdbc:sqlite:Kata5.db";
             // creamos una conexión a la BD
             con = DriverManager.getConnection(URL);
             System.out.println("Connexióna SQLiteestablecida");

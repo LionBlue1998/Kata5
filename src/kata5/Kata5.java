@@ -1,4 +1,4 @@
-package kata.pkg5;
+package kata5;
 
 import java.sql.SQLException;
 
