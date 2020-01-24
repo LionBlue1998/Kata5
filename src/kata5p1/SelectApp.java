@@ -1,4 +1,4 @@
-package kata5;
+package kata5p1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,11 +13,9 @@ public class SelectApp {
     public Connection connect() {
         
         
+        String URL = "jdbc:sqlite:Kata5.db";
         Connection con = null;
         try {
-            // parámetros de la BD
-            String URL = "jdbc:sqlite:Kata5.db";
-            // creamos una conexión a la BD
             con = DriverManager.getConnection(URL);
             System.out.println("Connexióna SQLiteestablecida");
         } catch (SQLException e) {
@@ -31,7 +29,7 @@ public class SelectApp {
         try (Connection con = this.connect();
             Statement stmt= con.createStatement();
             ResultSet rs= stmt.executeQuery(sql)){
-            // Bucle sobre el conjunto de registros.
+            
             while(rs.next()) {
                 System.out.println(rs.getInt("id") + "\t" +
                                    rs.getString("Nombre") + "\t" +
